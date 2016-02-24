@@ -1,7 +1,7 @@
 {
   "name": "vscode-clock",
-  "displayName": "Clock in status bar",
-  "description": "Displays clock in status bar in Visual Studio Code",
+  "displayName": "Clock",
+  "description": "Displays clock in status bar and insert into file",
   "version": "0.0.1",
   "publisher": "Compulim",
   "engines": {
