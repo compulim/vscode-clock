@@ -1,5 +1,5 @@
 # Clock for Visual Studio Code
-Shows clock in status bar in Visual Studio Code.
+Shows clock in status bar in Visual Studio Code, even in full screen mode.
 
 ![Demo showing clock in status bar](https://raw.githubusercontent.com/compulim/vscode-clock/master/demo.png)
 
