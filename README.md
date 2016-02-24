@@ -1,7 +1,7 @@
 # Clock for Visual Studio Code
 Shows clock in status bar in Visual Studio Code.
 
-![Demo showing how close tag works](https://raw.githubusercontent.com/compulim/vscode-clock/master/demo.png)
+![Demo showing clock in status bar](https://raw.githubusercontent.com/compulim/vscode-clock/master/demo.png)
 
 ## Usage
 When the extension is installed, a clock will be displayed on the lower right hand corner.
