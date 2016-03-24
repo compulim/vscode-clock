@@ -15,6 +15,11 @@
   },
   "bugs": "https://github.com/compulim/vscode-clock/issues/",
   "homepage": "https://github.com/compulim/vscode-clock/blob/master/README.md",
+  "keywords": [
+    "clock",
+    "timer",
+    "alarm"
+  ],
   "categories": [
     "Other"
   ],
