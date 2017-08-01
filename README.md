@@ -16,6 +16,12 @@ To insert the clock into the selection, you can either click on the clock on sta
 * Bring up Command Palette (`F1`, or `Ctrl+Shift+P` on Windows and Linux, or `Shift+CMD+P` on OSX)
 * Type or select "Clock: Insert date and time"
 
+The date time format that is used when inserting into selection can be changed via preferences
+* File > Preferences > User Settings
+* Adds the following line
+  *	```"clock.insertFormat": "dd/mm/yyyy hh:MM TT"```
+  * Date format can be found at https://github.com/felixge/node-dateformat
+
 You can also modify keyboard shortcut with JSON below.
 ```
 {
@@ -27,6 +33,7 @@ You can also modify keyboard shortcut with JSON below.
 
 ## Change log
 * 0.0.1 (2016-02-24): First public release
+* 0.1.0 (2017-08-01): Separate insert format than that shown in the clock
 
 ## Contributions
 Love this extension? [Star](https://github.com/compulim/vscode-clock/stargazers) us!
