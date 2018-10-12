@@ -28,10 +28,12 @@
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [{
-      "command": "clock.insertDateTime",
-      "title": "Clock: Insert date and time"
-    }],
+    "commands": [
+      {
+        "command": "clock.insertDateTime",
+        "title": "Clock: Insert date and time"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Clock configuration",
@@ -40,6 +42,11 @@
           "type": "string",
           "default": "hh:MM TT",
           "description": "Clock: Date format according to https://github.com/felixge/node-dateformat"
+        },
+        "clock.refreshInterval": {
+          "type": "number",
+          "default": 1,
+          "description": "Refresh interval for clock (set longer to reduce power consumption)"
         }
       }
     }
@@ -49,5 +56,10 @@
   },
   "dependencies": {
     "dateformat": "^1.0.12"
+  },
+  "__metadata": {
+    "id": "50810048-1465-4380-9716-6cd466f2ef8e",
+    "publisherDisplayName": "Compulim",
+    "publisherId": "f9dbfd7c-f9a1-434c-9971-648ad2e23f96"
   }
 }

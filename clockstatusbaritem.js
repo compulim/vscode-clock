@@ -14,7 +14,8 @@ class StatusBarItem {
     this._statusBarItem.tooltip = 'Click to insert into selection';
     this._statusBarItem.show();
 
-    this._interval = setInterval(() => this.refreshUI(), 1000);
+    this._refresh = vscode.workspace.getConfiguration('clock').refreshInterval * 1000 || 1000;
+    this._interval = setInterval(() => this.refreshUI(), this._refresh);
 
     this.refreshUI();
   }
