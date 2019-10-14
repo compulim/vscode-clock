@@ -32,14 +32,31 @@ function clockPriority() {
 
 class StatusBarItem {
   constructor() {
-    this._statusBarItem = vscode.window.createStatusBarItem(clockAlignment(), clockPriority());
-    this._statusBarItem.command = 'clock.insertDateTime';
-    this._statusBarItem.tooltip = 'Click to insert into selection';
-    this._statusBarItem.show();
-
+    this._statusBarItem = this._createStatusBar();
     this._interval = setInterval(() => this.refreshUI(), 1000);
 
+    vscode.workspace.onDidChangeConfiguration(this._onDidChangeConfiguration.bind(this));
+
     this.refreshUI();
+  }
+
+  _createStatusBar() {
+    const _statusBarItem = vscode.window.createStatusBarItem(clockAlignment(), clockPriority());
+    _statusBarItem.command = 'clock.insertDateTime';
+    _statusBarItem.tooltip = 'Click to insert into selection';
+    _statusBarItem.show();
+
+    return _statusBarItem;
+  }
+
+  _onDidChangeConfiguration(configurationChangeEvent) {
+    if (!configurationChangeEvent.affectsConfiguration('clock')) {
+      // This configuration change was unrelated to this extension.
+      return;
+    }
+
+    this._statusBarItem.dispose();
+    this._statusBarItem = this._createStatusBar();
   }
 
   dispose() {
