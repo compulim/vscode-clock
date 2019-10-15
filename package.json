@@ -28,10 +28,12 @@
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [{
-      "command": "clock.insertDateTime",
-      "title": "Clock: Insert date and time"
-    }],
+    "commands": [
+      {
+        "command": "clock.insertDateTime",
+        "title": "Clock: Insert date and time"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "Clock configuration",
@@ -40,6 +42,16 @@
           "type": "string",
           "default": "hh:MM TT",
           "description": "Clock: Date format according to https://github.com/felixge/node-dateformat"
+        },
+        "clock.alignment": {
+          "type": "string",
+          "default": "right",
+          "description": "Select which side of the status bar the clock should be placed in.",
+          "enum": ["left", "right"],
+          "enumDescriptions": [
+            "Adds the clock on the left side of the status bar.",
+            "Adds the clock on the right side of the status bar."
+          ]
         }
       }
     }
