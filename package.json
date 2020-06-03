@@ -26,6 +26,10 @@
   "activationEvents": [
     "*"
   ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "main": "./extension",
   "contributes": {
     "commands": [{
